@@ -2,25 +2,28 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-export default  () => {
+const Navigation = () => {
   return (
     <div>
       <ul>
-    <li className={styles.home}>
-     <center>
-     <Link href="/about" target="_blank"className={styles.about}>About</Link>
-     </center> <br/>
-     <center>
-     <Link href="/contact" target="_blank"className={styles.contact}>Contact</Link>
-     </center> <br/>
-     <center>
-     <Link href="/service" target="_blank" className={styles.service}>Service</Link>
-     </center>
-    
-     </li>
-     </ul>
-     
+        <li className={styles.home}>
+          {["About", "Contact", "Service"].map((text, index) => (
+            <div key={index} className={styles.linkContainer}>
+              <center>
+                <Link href={`/${text.toLowerCase()}`} target="_blank" className={styles[text.toLowerCase()]}>
+                  {text}
+                </Link>
+              </center>
+              <br />
+            </div>
+          ))}
+        </li>
+      </ul>
     </div>
-    
   );
-}
+};
+
+// Assign display name
+Navigation.displayName = "Navigation";
+
+export default Navigation;
