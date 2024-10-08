@@ -1,0 +1,24 @@
+.home{
+background-color: aqua;
+font-family: 'Times New Roman', Times, serif;
+
+
+.about{
+  font-weight: bolder;
+  font-size: xx-large;
+  background-color: lightblue;
+}
+.contact{
+  font-weight: bolder;
+  font-size: xx-large;
+  background-color: yellow;
+}
+.service{
+  font-weight: bolder;
+  font-size: xx-large;
+  background-color: violet;
+}
+
+}
+
+
